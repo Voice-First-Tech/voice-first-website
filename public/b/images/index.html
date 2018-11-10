@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name=”description” content=”Augment your customers reality with Google Actions, Alexa Skills, and Mobile Apps.“>
+    <meta name="keywords" content="Voice,Alexa,Google Assistant, Voice First Tech">
+    <meta name="author" content="Voice First Tech">
+    <title>Voice First Tech</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.0.4/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.0.4/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.0.4/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.0.4/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.0.4/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+      .youtube {
+        background-color: #000;
+        margin-bottom: 30px;
+        position: relative;
+        padding-top: 56.25%;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .youtube img {
+          width: 100%;
+          top: -16.84%;
+          left: 0;
+          opacity: 0.7;
+      }
+      .youtube .play-button {
+          width: 90px;
+          height: 60px;
+          background-color: #333;
+          box-shadow: 0 0 30px rgba( 0,0,0,0.6 );
+          z-index: 1;
+          opacity: 0.8;
+          border-radius: 6px;
+      }
+      .youtube .play-button:before {
+          content: "";
+          border-style: solid;
+          border-width: 15px 0 15px 26.0px;
+          border-color: transparent transparent transparent #fff;
+      }
+      .youtube img,
+      .youtube .play-button {
+          cursor: pointer;
+      }
+      .youtube img,
+      .youtube iframe,
+      .youtube .play-button,
+      .youtube .play-button:before {
+          position: absolute;
+      }
+      .youtube .play-button,
+      .youtube .play-button:before {
+          top: 50%;
+          left: 50%;
+          transform: translate3d( -50%, -50%, 0 );
+      }
+      .youtube iframe {
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+      }
+    </style>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <!-- Header -->
+			<section id="header">
+				<div class="inner">
+					<span class="icon major fa-cloud"></span>
+					<h1>Voice First Tech<br />
+					bringing <a href="#two" class="scrolly">free education</a> to all learners.</h1>
+					<p>Augment your customers' reality with voice apps including<br />
+					Google Actions, Alexa Skills, and Web Apps.</p>
+					<ul class="actions">
+						<li><a href="#one" class="button scrolly">Learn</a></li>
+					</ul>
+				</div>
+			</section>
+
+		<!-- One -->
+      <section id="one" class="main style1">
+        <div class="container">
+          <div class="row 150%">
+            <div class="6u 12u$(medium)">
+              <ul class="major-icons">
+                <li><span class="icon style2 major fa-graduation-cap"></span></li>
+                <li><span class="icon style2 major fa-volume-up"></span></li>
+                <li><span class="icon style2 major fa-code"></span></li>
+                <li><span class="icon style2 major fa-mobile"></span></li>
+              </ul>
+            </div>
+            <div class="6u$ 12u$(medium)">
+              <header class="major">
+                <h2>We build voice apps<br />
+                to enrich our customers' lives</h2>
+              </header>
+              <p>Voice apps create new ways to engage. Interact seamlessly with the web in a unique form of authentication... your voice </p>
+              <p><i>"One in six Americans now own a smart speaker, according to new research ... from NPR and Edison Research – a figure that’s up 128 percent from January, 2017"</i> - <a href="https://techcrunch.com/2018/01/12/39-million-americans-now-own-a-smart-speaker-report-claims/" target="_blank">TechCrunch</a> Jan 2018</p>
+              <p>Alexa & Google Assistants* are baked into everything from <a href="https://www.engadget.com/2018/01/07/lgs-alexa-powered-fridge-sends-recipes-to-your-oven/" target="_blank">fridges</a> to <a href="https://store.google.com/us/product/google_home_mini_learn?hl=en-US" target="_blank"> speakers</a>.
+                In an age where phone screens have become populated with millions of apps and ads, voice presents a new opportunity to redefine where and how customers interact with your service.<br /><sub>*(and maybe sometime soon <a href="https://developer.apple.com/sirikit/" target="_blank">Siri</a>)</sub> </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+		<!-- Two -->
+      <section id="two" class="main style1">
+        <div class="container">
+          <div class="row 150%">
+            <div class="6u 12u$(medium)">
+              <header class="major">
+                <h2>Education</h2>
+              </header>
+              <p>All profits from <a href="https://www.upwork.com/agencies/~01454582c2568b8496" target="_blank">Voice First Tech's Agency</a> go directly towards educating high-school and college students with free Voice App development resources and bootcamps.</p>
+              <p>Additionally, we offer free resources available on pretty much <a href="#footer" class="scrolly">every major platform</a> to get started coding today.</p>
+            </div>
+            <div class="6u$ 12u$(medium) important(medium)">
+              <!-- Lazy Load Video -->
+              <div class="embed-responsive embed-responsive-16by9 col-6 youtube" data-embed="qyNwuFijrMc">
+                <!-- Placeholder Play Button -->
+                <div class="play-button"></div>
+              </div>
+              <sub><p>*Free Resource</p></sub>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+		<!-- Three -->
+			<section id="three" class="main style1 special">
+				<div class="container">
+					<header class="major">
+						<h2>Pick 1, Pick all 3, your move</h2>
+            <p>We have just the techie for you, at whatever experience level your project requires</p>
+					</header>
+					<div class="row 150%">
+						<div class="4u 12u$(medium)">
+							<span class="image fit"><img src="images/GoogleAssistant.jpg" alt="" /></span>
+							<h3>Google Assistant</h3>
+							<p>Easily provide navigation to your store or let guests make reservations simply by asking. Bring your service or product to the Google Assistant.</p>
+							<ul class="actions">
+								<li><a href="https://www.upwork.com/agencies/~01454582c2568b8496" class="button">More</a></li>
+							</ul>
+						</div>
+            <div class="4u 12u$(medium)">
+							<span class="image fit"><img src="images/AmazonAlexa.jpg" alt="" /></span>
+							<h3>Amazon Alexa</h3>
+							<p>Sell products directly using Amazon Pay or create control over smart Internet of Things (IoT) devices. Make your product or service available on Amazon Alexa.</p>
+							<ul class="actions">
+								<li><a href="https://www.upwork.com/agencies/~01454582c2568b8496" class="button">More</a></li>
+							</ul>
+						</div>
+						<div class="4u$ 12u$(medium)">
+							<span class="image fit"><img src="images/mobile-development.png" alt="" /></span>
+							<h3>Mobile</h3>
+							<p>Bring your business to your cross-platform, Android, or IOS app(s). </p>
+							<ul class="actions">
+								<li><a href="https://www.upwork.com/agencies/~01454582c2568b8496" class="button">More</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Four -->
+			<section id="four" class="main style2 special">
+				<div class="container">
+					<header class="major">
+						<h2>Let's Collaborate.</h2>
+					</header>
+					<p>Let's chat.</p>
+					<ul class="actions uniform">
+						<li><a href="mailto:sales@voicefirsttech.com" class="button special">Get a Quote</a></li>
+						<li><a href="mailto:project-managers@voicefirsttech.com" class="button">Email a Project Manager</a></li>
+					</ul>
+				</div>
+			</section>
+
+		<!-- Five -->
+		<!--
+			<section id="five" class="main style1">
+				<div class="container">
+					<header class="major special">
+						<h2>Elements</h2>
+					</header>
+
+					<section>
+						<h4>Text</h4>
+						<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+						This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+						This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+						<hr />
+						<header>
+							<h4>Heading with a Subtitle</h4>
+							<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+						</header>
+						<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+						<header>
+							<h5>Heading with a Subtitle</h5>
+							<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+						</header>
+						<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+						<hr />
+						<h2>Heading Level 2</h2>
+						<h3>Heading Level 3</h3>
+						<h4>Heading Level 4</h4>
+						<h5>Heading Level 5</h5>
+						<h6>Heading Level 6</h6>
+						<hr />
+						<h5>Blockquote</h5>
+						<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+						<h5>Preformatted</h5>
+						<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+print 'Iteration ' + i;
+deck.shuffle();
+i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+					</section>
+
+					<section>
+						<h4>Lists</h4>
+						<div class="row">
+							<div class="6u 12u$(medium)">
+								<h5>Unordered</h5>
+								<ul>
+									<li>Dolor pulvinar etiam.</li>
+									<li>Sagittis adipiscing.</li>
+									<li>Felis enim feugiat.</li>
+								</ul>
+								<h5>Alternate</h5>
+								<ul class="alt">
+									<li>Dolor pulvinar etiam.</li>
+									<li>Sagittis adipiscing.</li>
+									<li>Felis enim feugiat.</li>
+								</ul>
+							</div>
+							<div class="6u$ 12u$(medium)">
+								<h5>Ordered</h5>
+								<ol>
+									<li>Dolor pulvinar etiam.</li>
+									<li>Etiam vel felis viverra.</li>
+									<li>Felis enim feugiat.</li>
+									<li>Dolor pulvinar etiam.</li>
+									<li>Etiam vel felis lorem.</li>
+									<li>Felis enim et feugiat.</li>
+								</ol>
+								<h5>Icons</h5>
+								<ul class="icons">
+									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+								</ul>
+							</div>
+						</div>
+						<h5>Actions</h5>
+						<div class="row">
+							<div class="6u 12u$(medium)">
+								<ul class="actions">
+									<li><a href="#" class="button special">Default</a></li>
+									<li><a href="#" class="button">Default</a></li>
+								</ul>
+								<ul class="actions small">
+									<li><a href="#" class="button special small">Small</a></li>
+									<li><a href="#" class="button small">Small</a></li>
+								</ul>
+								<ul class="actions vertical">
+									<li><a href="#" class="button special">Default</a></li>
+									<li><a href="#" class="button">Default</a></li>
+								</ul>
+								<ul class="actions vertical small">
+									<li><a href="#" class="button special small">Small</a></li>
+									<li><a href="#" class="button small">Small</a></li>
+								</ul>
+							</div>
+							<div class="6u 12u$(medium)">
+								<ul class="actions vertical">
+									<li><a href="#" class="button special fit">Default</a></li>
+									<li><a href="#" class="button fit">Default</a></li>
+								</ul>
+								<ul class="actions vertical small">
+									<li><a href="#" class="button special small fit">Small</a></li>
+									<li><a href="#" class="button small fit">Small</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h4>Table</h4>
+						<h5>Default</h5>
+						<div class="table-wrapper">
+							<table>
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Description</th>
+										<th>Price</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Item One</td>
+										<td>Ante turpis integer aliquet porttitor.</td>
+										<td>29.99</td>
+									</tr>
+									<tr>
+										<td>Item Two</td>
+										<td>Vis ac commodo adipiscing arcu aliquet.</td>
+										<td>19.99</td>
+									</tr>
+									<tr>
+										<td>Item Three</td>
+										<td> Morbi faucibus arcu accumsan lorem.</td>
+										<td>29.99</td>
+									</tr>
+									<tr>
+										<td>Item Four</td>
+										<td>Vitae integer tempus condimentum.</td>
+										<td>19.99</td>
+									</tr>
+									<tr>
+										<td>Item Five</td>
+										<td>Ante turpis integer aliquet porttitor.</td>
+										<td>29.99</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<td colspan="2"></td>
+										<td>100.00</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+
+						<h5>Alternate</h5>
+						<div class="table-wrapper">
+							<table class="alt">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Description</th>
+										<th>Price</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Item One</td>
+										<td>Ante turpis integer aliquet porttitor.</td>
+										<td>29.99</td>
+									</tr>
+									<tr>
+										<td>Item Two</td>
+										<td>Vis ac commodo adipiscing arcu aliquet.</td>
+										<td>19.99</td>
+									</tr>
+									<tr>
+										<td>Item Three</td>
+										<td> Morbi faucibus arcu accumsan lorem.</td>
+										<td>29.99</td>
+									</tr>
+									<tr>
+										<td>Item Four</td>
+										<td>Vitae integer tempus condimentum.</td>
+										<td>19.99</td>
+									</tr>
+									<tr>
+										<td>Item Five</td>
+										<td>Ante turpis integer aliquet porttitor.</td>
+										<td>29.99</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<td colspan="2"></td>
+										<td>100.00</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</section>
+
+					<section>
+						<h4>Buttons</h4>
+						<ul class="actions">
+							<li><a href="#" class="button special">Special</a></li>
+							<li><a href="#" class="button">Default</a></li>
+						</ul>
+						<ul class="actions">
+							<li><a href="#" class="button big">Big</a></li>
+							<li><a href="#" class="button">Default</a></li>
+							<li><a href="#" class="button small">Small</a></li>
+						</ul>
+						<ul class="actions fit">
+							<li><a href="#" class="button fit">Fit</a></li>
+							<li><a href="#" class="button special fit">Fit</a></li>
+							<li><a href="#" class="button fit">Fit</a></li>
+						</ul>
+						<ul class="actions fit small">
+							<li><a href="#" class="button special fit small">Fit + Small</a></li>
+							<li><a href="#" class="button fit small">Fit + Small</a></li>
+							<li><a href="#" class="button special fit small">Fit + Small</a></li>
+						</ul>
+						<ul class="actions">
+							<li><a href="#" class="button special icon fa-download">Icon</a></li>
+							<li><a href="#" class="button icon fa-download">Icon</a></li>
+						</ul>
+						<ul class="actions">
+							<li><span class="button special disabled">Disabled</span></li>
+							<li><span class="button disabled">Disabled</span></li>
+						</ul>
+					</section>
+
+					<section>
+						<h4>Form</h4>
+						<form method="post" action="#">
+							<div class="row uniform 50%">
+								<div class="6u 12u$(xsmall)">
+									<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+								</div>
+								<div class="6u$ 12u$(xsmall)">
+									<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+								</div>
+								<div class="12u$">
+									<div class="select-wrapper">
+										<select name="demo-category" id="demo-category">
+											<option value="">- Category -</option>
+											<option value="1">Manufacturing</option>
+											<option value="1">Shipping</option>
+											<option value="1">Administration</option>
+											<option value="1">Human Resources</option>
+										</select>
+									</div>
+								</div>
+								<div class="4u 12u$(small)">
+									<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+									<label for="demo-priority-low">Low</label>
+								</div>
+								<div class="4u 12u$(small)">
+									<input type="radio" id="demo-priority-normal" name="demo-priority">
+									<label for="demo-priority-normal">Normal</label>
+								</div>
+								<div class="4u$ 12u$(small)">
+									<input type="radio" id="demo-priority-high" name="demo-priority">
+									<label for="demo-priority-high">High</label>
+								</div>
+								<div class="6u 12u$(small)">
+									<input type="checkbox" id="demo-copy" name="demo-copy">
+									<label for="demo-copy">Email me a copy</label>
+								</div>
+								<div class="6u$ 12u$(small)">
+									<input type="checkbox" id="demo-human" name="demo-human" checked>
+									<label for="demo-human">Not a robot</label>
+								</div>
+								<div class="12u$">
+									<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+								</div>
+								<div class="12u$">
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="special" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</section>
+
+					<section>
+						<h4>Image</h4>
+						<h5>Fit</h5>
+						<div class="box alt">
+							<div class="row uniform 50%">
+								<div class="12u"><span class="image fit"><img src="images/pic06.jpg" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+							</div>
+						</div>
+						<h5>Left &amp; Right</h5>
+						<p><span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+						<p><span class="image right"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+					</section>
+
+				</div>
+			</section>
+		-->
+
+		<!-- Footer -->
+			<section id="footer">
+				<ul class="icons">
+					<!-- <li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li> -->
+					<li><a href="https://www.facebook.com/VoiceFirstTech/" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="https://www.instagram.com/voicefirsttech/" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="https://github.com/Voice-First-Tech" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="mailto:support@voicefirsttech.com" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Voice First Tech</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let youtube = document.querySelectorAll( ".youtube" );
+
+    			for (let i = 0; i < youtube.length; i++) {
+    				// thumbnail image source.
+    				var source = "https://img.youtube.com/vi/"+ youtube[i].dataset.embed +"/sddefault.jpg";
+
+    				// Load the image asynchronously
+    		    var image = new Image();
+            image.src = source;
+            image.addEventListener( "load", function() {
+                youtube[ i ].appendChild( image );
+            }( i ) );
+
+    				youtube[i].addEventListener( "click", function() {
+    		        var iframe = document.createElement( "iframe" );
+
+    		            iframe.setAttribute( "frameborder", "0" );
+    		            iframe.setAttribute( "allowfullscreen", "" );
+    		            iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
+
+    		            this.innerHTML = "";
+    		            this.appendChild( iframe );
+    		    } );
+
+    			}
+          let app = firebase.app();
+        } catch (e) {
+          console.error(e);
+        }
+      });
+    </script>
+    <!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/js/main.js"></script>
+  </body>
+</html>

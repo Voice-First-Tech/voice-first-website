@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name=”description” content=”Augment your customers reality with Google Actions, Alexa Skills, and Mobile Apps.“>
+    <meta name="keywords" content="Voice,Alexa,Google Assistant, Voice First Tech">
+    <title>Voice First Tech</title>
+
+    <!-- FIREBASE IMPORTS -->
+    <!-- Firebase App is always required and must be first -->
+    <script src="/__/firebase/5.3.0/firebase-app.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="/__/firebase/5.3.0/firebase-auth.js"></script>
+    <script src="/__/firebase/5.3.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <!-- FIREBASE CONFIG -->
+    <script>
+      var config = {
+        apiKey: "AIzaSyDPxD863ntN4QxSXxuVwqY6vlTmffxqw_E",
+        authDomain: "voicefirsttech-website.firebaseapp.com",
+        databaseURL: "https://voicefirsttech-website.firebaseio.com",
+        projectId: "voicefirsttech-website",
+        storageBucket: "voicefirsttech-website.appspot.com",
+        messagingSenderId: "207284529922"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <!-- FIREBASE AUTH UI -->
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.2.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.2.0/firebaseui.css" />
+    <script type="text/javascript">
+      // FirebaseUI config.
+      var uiConfig = {
+        signInSuccessUrl: 'https://voicefirsttech.com/edu/home',
+        signInOptions: [
+          // Leave the lines as is for the providers you want to offer your users.
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+          firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+          firebase.auth.GithubAuthProvider.PROVIDER_ID,
+          firebase.auth.EmailAuthProvider.PROVIDER_ID,
+          firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+        ],
+        // Terms of service url.
+        tosUrl: 'https://en.wikipedia.org/wiki/Terms_of_service',
+        // Privacy policy url.
+        privacyPolicyUrl: 'https://voicefirsttech.com/assets/pdf/privacy-policy.pdf'
+      };
+
+      // Initialize the FirebaseUI Widget using Firebase.
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+
+  </head>
+
+  <body class="text-center">
+    <div id="firebaseui-auth-container"></div>
+  </body>
+
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name=”description” content=”Augment your customers reality with Google Actions, Alexa Skills, and Mobile Apps.“>
+    <meta name="keywords" content="Voice,Alexa,Google Assistant, Voice First Tech">
+    <meta name="author" content="Voice First Tech">
+    <title>Customers</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.0.4/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.0.4/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.0.4/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.0.4/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.0.4/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+      .youtube {
+        background-color: #000;
+        margin-bottom: 30px;
+        position: relative;
+        padding-top: 56.25%;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .youtube img {
+          width: 100%;
+          top: -16.84%;
+          left: 0;
+          opacity: 0.7;
+      }
+      .youtube .play-button {
+          width: 90px;
+          height: 60px;
+          background-color: #333;
+          box-shadow: 0 0 30px rgba( 0,0,0,0.6 );
+          z-index: 1;
+          opacity: 0.8;
+          border-radius: 6px;
+      }
+      .youtube .play-button:before {
+          content: "";
+          border-style: solid;
+          border-width: 15px 0 15px 26.0px;
+          border-color: transparent transparent transparent #fff;
+      }
+      .youtube img,
+      .youtube .play-button {
+          cursor: pointer;
+      }
+      .youtube img,
+      .youtube iframe,
+      .youtube .play-button,
+      .youtube .play-button:before {
+          position: absolute;
+      }
+      .youtube .play-button,
+      .youtube .play-button:before {
+          top: 50%;
+          left: 50%;
+          transform: translate3d( -50%, -50%, 0 );
+      }
+      .youtube iframe {
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+      }
+    </style>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+  <body class="container">
+    <section>
+      <header>
+        <h4>Meet our Customers</h4>
+        <p>the institutions powering our movement</p>
+      </header>
+
+      <header>
+        <div class="row">
+          <div class="4u 12u$(medium)">
+            <a href="https://www.sproutlaunch.com/about" target="_blank"><img src="../images/sprout-logo.webp" alt="" /></a>
+          </div>
+        </div>
+        <h3>Sprout Launch </h3>
+      </header>
+      <p>Create change in our communities by encouraging good deeds and acts of kindness. </p>
+      <p><a target="_blank" href="https://www.amazon.com/SproutLaunch-Good-Deeds-Acts-Kindness/dp/B07BYT9N4K/ref=sr_1_1"> Alexa </a></p>
+      <p><a target="_blank" href="https://assistant.google.com/services/a/uid/000000d9ea985567"> Google Assistant</a> </p>
+
+      <header>
+        <div class="row">
+          <div class="4u 12u$(medium)">
+            <a href="https://www.confessedsecrets.com/" target="_blank"><img src="../images/confessed-secrets.png" alt="" /></a>
+          </div>
+        </div>
+        <h3>Confessed Secrets </h3>
+      </header>
+      <p>Share your embarrassing moment or hilarious secret confession. Amazon Alexa and Google Assistant will share it anonymously with the world. </p>
+      <p><a target="_blank" href="https://www.amazon.com/Finding-Unicorns-Confessed-Secrets/dp/B079PNP6GD/ref=sr_1_1"> Alexa </a></p>
+      <p><a target="_blank" href="https://assistant.google.com/services/a/uid/000000d337d3bde1"> Google Assistant</a> </p>
+
+      <header>
+        <div class="row">
+          <div class="4u 12u$(medium)">
+            <a href="https://www.confessedsecrets.com/" target="_blank"><img src="../images/direct-mail-io.jpg" alt="" /></a>
+          </div>
+        </div>
+        <h3>Direct Mail IO </h3>
+      </header>
+      <p>A  powerful omnichannel platform to generate leads. </p>
+      <p><a target="_blank" href="https://www.amazon.com/DirectMail-io-Direct-Mail/dp/B07HGBQYXS/ref=sr_1_1"> Alexa </a></p>
+      <p><a target="_blank" href="https://assistant.google.com/u/1/services/a/uid/0000001fa19e084c"> Google Assistant</a> </p>
+
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let youtube = document.querySelectorAll( ".youtube" );
+
+    			for (let i = 0; i < youtube.length; i++) {
+    				// thumbnail image source.
+    				var source = "https://img.youtube.com/vi/"+ youtube[i].dataset.embed +"/sddefault.jpg";
+
+    				// Load the image asynchronously
+    		    var image = new Image();
+            image.src = source;
+            image.addEventListener( "load", function() {
+                youtube[ i ].appendChild( image );
+            }( i ) );
+
+    				youtube[i].addEventListener( "click", function() {
+    		        var iframe = document.createElement( "iframe" );
+
+    		            iframe.setAttribute( "frameborder", "0" );
+    		            iframe.setAttribute( "allowfullscreen", "" );
+    		            iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
+
+    		            this.innerHTML = "";
+    		            this.appendChild( iframe );
+    		    } );
+
+    			}
+          let app = firebase.app();
+        } catch (e) {
+          console.error(e);
+        }
+      });
+    </script>
+    <!-- Scripts -->
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/jquery.scrolly.min.js"></script>
+		<script src="../assets/js/skel.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="../assets/js/main.js"></script>
+  </body>
+</html>
