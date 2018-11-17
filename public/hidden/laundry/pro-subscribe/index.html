@@ -9,7 +9,17 @@
     <!-- FAVICON-->
     <link rel="icon" href="../../images/favicon.ico" type="image/x-icon" />
 
-    <title>SUBSCRIBE-BASIC</title>
+    <title>SUBSCRIBE</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129220944-1"></script>
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', 'UA-129220944-1');
+    </script>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -31,20 +41,23 @@
         <div class="card-deck mb-12 text-center">
           <div class="card mb-12 shadow-sm">
             <div class="card-header">
-              <h4 class="my-0 font-weight-normal">Basic</h4>
+              <h4 class="my-0 font-weight-normal">Free</h4>
             </div>
             <div class="card-body">
-              <h1 class="card-title pricing-card-title">$19 <small class="text-muted">/ month</small></h1>
+              <h1 class="card-title pricing-card-title">$49 <small class="text-muted">/ month</small></h1>
               <ul class="list-unstyled mt-3 mb-4">
                 <li>1 Store Location</li>
                 <li>Alexa Skill</li>
                 <li>Google Action</li>
+                <li>FREE Echo Dot</li>
+                <li>OR</li>
+                <li>FREE Google Home Mini</li>
               </ul>
             </div>
           </div>
         </div>
         </br>
-        <h3>Total (Free): $19 / month</h3>
+        <h3>Total (Free): $49 / month</h3>
         </br>
       </div>
       <div class="align-items-center" id="container"></div>
@@ -59,10 +72,6 @@
     <script src="../../assets/js/vendor/popper.min.js"></script>
     <script src="../../dist/js/bootstrap.min.js"></script>
     <script src="../../assets/js/vendor/holder.min.js"></script>
-
-    <!-- BRAINTREE IMPORT -->
-    <script src="https://js.braintreegateway.com/web/3.39.0/js/client.min.js"></script>
-    <script src="https://js.braintreegateway.com/web/3.39.0/js/google-payment.min.js"></script>
 
     <!-- GOOGLE PAY IMPORT -->
 
@@ -245,7 +254,7 @@
         currencyCode: 'USD',
         totalPriceStatus: 'FINAL',
         // set to cart total
-        totalPrice: '19.00'
+        totalPrice: '49.00'
       };
     }
 
@@ -294,11 +303,6 @@
       // show returned data in developer console for debugging
       console.log(paymentData);
       // @todo pass payment data response to your gateway to process payment
-      braintree.googlePayment.create({
-        client: clientInstance // From braintree.client.create, see below for full example
-      }, function (err, googlePaymentInstance) {
-        // Set up Google Pay button
-      });
     }
     </script>
     <script async

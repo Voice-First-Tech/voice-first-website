@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Pricing for Google Actions, Alexa Skills, and Mobile Apps.">
-    <meta name="keywords" content="Voice, Alexa, Google Assistant, Voice First Tech">
-    <title>Voice First Tech</title>
+    <meta name=”description” content=”Augment your customers reality with Google Actions, Alexa Skills, and Mobile Apps.“>
+    <meta name="keywords" content="Voice,Alexa,Google Assistant, Voice First Tech">
+    <meta name="author" content="Voice First Tech">
+    <title>Laundry + Voice</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129220944-1"></script>
@@ -17,6 +18,12 @@
      gtag('config', 'UA-129220944-1');
     </script>
 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- FAVICON-->
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/5.0.4/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
@@ -24,7 +31,6 @@
     <script defer src="/__/firebase/5.0.4/firebase-database.js"></script>
     <script defer src="/__/firebase/5.0.4/firebase-messaging.js"></script>
     <script defer src="/__/firebase/5.0.4/firebase-storage.js"></script>
-    <script defer src="/__/firebase/5.0.4/firebase-firestore.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
 
@@ -94,48 +100,69 @@
       }
     </style>
     <link rel="stylesheet" href="../assets/css/main.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   </head>
   <body>
     <!-- Header -->
 			<section id="header">
 				<div class="inner">
-					<span class="icon major fa-cloud"></span>
-					<h1>Voice First Tech</h1>
-          <p>Add voice to your business<br />
-					Let's chat</p>
+					<span class="icon major fa-comments"></span>
+					<h1>Laundry + Voice<h1 />
+					<h3>"Alexa, ask my dry cleaner to pick up my laundry"</h3>
+					<p>bring voice to your dry cleaning service</p>
 					<ul class="actions">
-						<li><a href="#form" class="button scrolly">Voice + Business</a></li>
+						<li><a href="#one" class="button scrolly">Learn More</a></li>
 					</ul>
 				</div>
 			</section>
 
 		<!-- One -->
-    <section class="container">
-      <h4 id="form">Voice Consultation</h4>
-      <form method="post" action="#">
-        <div class="row uniform 50%">
-          <div class="12u 12u$(xsmall)">
-            <input type="text" name="demo-name" id="name" value="" placeholder="Name" />
-          </div>
-          <div class="12u 12u$(xsmall)">
-            <input type="email" name="demo-email" id="email" value="" placeholder="Email" />
-          </div>
-          <div class="12u 12u$(xsmall)">
-            <input type="text" name="phone-number" id="phone" value="" placeholder="Phone Number" />
-          </div>
-          <div class="12u 12u$(xsmall)">
-            <input type="text" name="what-you-do" id="whatDoYouDo" value="" placeholder="What do you do?" />
-          </div>
-          <div class="12u 12u$">
+      <section id="one" class="main style1">
+        <div class="container">
+            <div class="row justify-content-center">
+              <!-- Lazy Load Video -->
+              <div class="embed-responsive embed-responsive-16by9 col-6 youtube" data-embed="ekWsaVDY1To">
+                <!-- Placeholder Play Button -->
+                <div class="play-button"></div>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <header class="major">
+                <h3>The world's leading provider <br />
+                of voice-first solutions</h3>
+              </header>
+              <p>We help more dry cleaners solve time-related challenges and prepare for the future of voice-first lifestyles. We do this by providing enterprise-grade solutions through an open business model and an affordable, predictable subscription model </p>
+            </div>
             <ul class="actions">
-              <li><button type="button" class="btn btn-primary btn-lg btn-block" id="submit" value="Submit" class="special" >Submit</button></li>
-            </ul>
-          </div>
+  						<li><a href="#four" class="button scrolly">Pricing</a></li>
+  					</ul>
         </div>
-      </form>
-    </section>
+      </section>
 
+
+		<!-- Four -->
+			<section id="four" class="main style1 special">
+				<div class="container">
+					<header class="major">
+						<h2>Get Started</h2>
+					</header>
+          </br>
+          <div class="row justify-content-center">
+            <input class="6u 6u$(xsmall) " type="text" name="business-name" id="business-name" value="" placeholder="Name of your Business" />
+          </div>
+          </br>
+          </br>
+          <div class="row justify-content-md-center">
+            <input class="6u 6u$(xsmall) " type="text" name="business-phone" id="business-phone" value="" placeholder="Business Phone Number to text orders to (optional)" />
+          </div>
+          </br>
+          <div id="pricing-missing-info-alert" class="alert alert-primary" role="alert" style="display:none">
+             What is the name of your business?
+          </div>
+					<ul class="actions uniform">
+						<li><a id="pricing-button" class="button special">Pricing</a></li>
+					</ul>
+				</div>
+			</section>
 
 		<!-- Footer -->
 			<section id="footer">
@@ -143,6 +170,8 @@
 					<!-- <li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li> -->
 					<li><a href="https://www.facebook.com/VoiceFirstTech/" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
 					<li><a href="https://www.instagram.com/voicefirsttech/" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+          <li><a href="https://twitter.com/VoiceFirstTech" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+          <li><a href="https://www.youtube.com/channel/UCs8lN2Bfhou5PTC34-Vt6_A" class="icon alt fa-youtube"><span class="label">Youtube</span></a></li>
 					<li><a href="https://github.com/Voice-First-Tech" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
 					<li><a href="mailto:support@voicefirsttech.com" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
 				</ul>
@@ -151,8 +180,62 @@
 				</ul>
 			</section>
 
+    <!-- Scripts -->
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/jquery.scrolly.min.js"></script>
+		<script src="../assets/js/skel.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="../assets/js/main.js"></script>
+
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAg4iWLWiUUHQBJjMtUrXc0p-bJ0GfVcKo",
+        authDomain: "mydrycleaner-be879.firebaseapp.com",
+        databaseURL: "https://mydrycleaner-be879.firebaseio.com",
+        projectId: "mydrycleaner-be879",
+        storageBucket: "mydrycleaner-be879.appspot.com",
+        messagingSenderId: "615508835592"
+      };
+      firebase.initializeApp(config);
+      // Initialize Cloud Firestore through Firebase
+      var db = firebase.firestore();
+
+      // Disable deprecated features
+      db.settings({
+        timestampsInSnapshots: true
+      });
+    </script>
+
     <script>
       document.addEventListener('DOMContentLoaded', function() {
+        $("#pricing-button").click(function(event) {
+          if ($("#business-name").val() == "") {
+            $("#pricing-missing-info-alert").show();
+          } else {
+            $("#pricing-missing-info-alert").hide();
+            let date = new Date(),
+                year = date.getFullYear().toString(),
+                month = (date.getMonth() + 1).toString(),
+                day = date.getDate().toString();
+
+            db.collection("pricing-data").doc($("#business-name").val()).set({
+                businessName: $("#business-name").val(),
+                updated: year + "-" + month + "-" + day,
+                phone: $("#business-phone").val()
+            })
+            .then(function(docRef) {
+                console.log("Business Added: ", $("#business-name").val());
+                window.location.replace("https://voicefirsttech.com/laundry/pricing")
+            })
+            .catch(function(error) {
+                console.error("Error adding document: ", error);
+            });
+          }
+        });
         // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
         // // The Firebase SDK is initialized and available here!
         //
@@ -194,33 +277,6 @@
           console.error(e);
         }
       });
-    </script>
-
-    <!-- Scripts -->
-		<script src="../assets/js/jquery.min.js"></script>
-		<script src="../assets/js/jquery.scrolly.min.js"></script>
-		<script src="../assets/js/skel.min.js"></script>
-		<script src="../assets/js/util.js"></script>
-		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-		<script src="../assets/js/main.js"></script>
-    <script src="../voice/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-    <!-- iFrame responsive sizing -->
-    <script>
-      let viewport = $( window ).width();
-      $("#pricing-holder").append('<p  align="center"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckQfpx10kWiG02tC--AhjNJidcIx_Lwi04KNXgssqqtlb0pg/viewform?embedded=true" width="' + (viewport * 0.8) + '" height="1000" class="display:block;" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe></p>')
-
-      // if (viewport > 1200) {
-      //   $("#pricing-holder").html(<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckQfpx10kWiG02tC--AhjNJidcIx_Lwi04KNXgssqqtlb0pg/viewform?embedded=true" width="700" height="1000" class="display:block;" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>)
-      // } else if (viewport > 992) {
-      //   $("#pricing-holder").html(<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckQfpx10kWiG02tC--AhjNJidcIx_Lwi04KNXgssqqtlb0pg/viewform?embedded=true" width="700" height="1000" class="display:block;" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>)
-      // } else if (viewport > 768) {
-      //   $("#pricing-holder").html(<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckQfpx10kWiG02tC--AhjNJidcIx_Lwi04KNXgssqqtlb0pg/viewform?embedded=true" width="400" height="1000" class="display:block;" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>)
-      // } else {
-      //   $("#pricing-holder").html(<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckQfpx10kWiG02tC--AhjNJidcIx_Lwi04KNXgssqqtlb0pg/viewform?embedded=true" width="400" height="1000" class="display:block;" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>)
-      // }
     </script>
   </body>
 </html>
