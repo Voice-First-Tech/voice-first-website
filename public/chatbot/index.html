@@ -9,7 +9,7 @@
     <title>Voice First Tech</title>
 
     <!-- FAVICON-->
-    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
 
     <!-- BOOTSTAP IMPORT -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -99,43 +99,12 @@
           left: 0;
       }
     </style>
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
   </head>
   <body>
     <!-- Header -->
 			<section id="header">
 				<div class="inner">
-					<span class="icon major fa-comments"></span>
-					<h1>Voice First Tech</h1>
-					<p>Augment your customers' reality with voice apps including<br />
-					Google Actions, Alexa Skills, and Web Apps.</p>
-					<ul class="actions">
-						<li><a href="#one" class="button scrolly">Learn More</a></li>
-					</ul>
-				</div>
-			</section>
-
-		<!-- One -->
-      <section id="one" class="main style1">
-        <div class="container">
-          <div class="row 150%">
-            <div class="12u$ 12u$(medium) justify-content-center text-center">
-              <header class="major">
-                <h2>We build voice apps<br />
-                to enrich our customers' lives</h2>
-              </header>
-              <p>Voice apps create new ways to engage. Interact seamlessly with the web in a unique form of authentication... your voice </p>
-              <p><i>"One in six Americans now own a smart speaker, according to new research ... from NPR and Edison Research – a figure that’s up 128 percent from January, 2017"</i> - <a href="https://techcrunch.com/2018/01/12/39-million-americans-now-own-a-smart-speaker-report-claims/" target="_blank">TechCrunch</a> Jan 2018</p>
-              <p>Alexa & Google Assistants* are baked into everything from <a href="https://www.engadget.com/2018/01/07/lgs-alexa-powered-fridge-sends-recipes-to-your-oven/" target="_blank">fridges</a> to <a href="https://store.google.com/us/product/google_home_mini_learn?hl=en-US" target="_blank"> speakers</a>.
-                In an age where phone screens have become populated with millions of apps and ads, voice presents a new opportunity to redefine where and how customers interact with your service.<br /><sub>*(and maybe sometime soon <a href="https://developer.apple.com/sirikit/" target="_blank">Siri</a>)</sub> </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <!-- Two -->
-        <section id="two" class="main style1">
           <div class="container justify-content-center text-center">
             <iframe
               allow="microphone;"
@@ -144,44 +113,6 @@
               src="https://console.dialogflow.com/api-client/demo/embedded/a4d06291-e55f-469a-8e22-6044f25f0b3e">
           </iframe>
           </div>
-        </section>
-
-
-		<!-- Three -->
-      <section id="three" class="main style1">
-        <div class="container">
-          <div class="row 150%">
-            <div class="12u 12u$(medium) justify-content-center text-center">
-              <header class="major">
-                <h2>Education</h2>
-              </header>
-              <p>All profits from <a href="https://www.upwork.com/agencies/~01454582c2568b8496" target="_blank">Voice First Tech's Agency</a> go directly towards educating high-school and college students with free Voice App development resources and bootcamps.</p>
-              <p>Additionally, we offer free resources available on pretty much <a href="#footer" class="scrolly">every major platform</a> to get started coding today.</p>
-            </div>
-            <div class="12u$  justify-content-center text-center">
-              <!-- Lazy Load Video -->
-              <div class="embed-responsive col-12 youtube" data-embed="qyNwuFijrMc">
-                <!-- Placeholder Play Button -->
-                <div class="play-button"></div>
-              </div>
-              <sub><p>*Free Resource</p></sub>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-		<!-- Four -->
-			<section id="four" class="main style2 special">
-				<div class="container">
-					<header class="major">
-						<h2>Let's Collaborate.</h2>
-					</header>
-					<p>Let's chat.</p>
-					<ul class="actions uniform">
-						<li><a href="mailto:sales@voicefirsttech.com" class="button special">Get a Quote</a></li>
-						<li><a href="mailto:project-managers@voicefirsttech.com" class="button">Email a Project Manager</a></li>
-					</ul>
 				</div>
 			</section>
 
@@ -201,58 +132,14 @@
 				</ul>
 			</section>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let youtube = document.querySelectorAll( ".youtube" );
-
-    			for (let i = 0; i < youtube.length; i++) {
-    				// thumbnail image source.
-    				var source = "https://img.youtube.com/vi/"+ youtube[i].dataset.embed +"/sddefault.jpg";
-
-    				// Load the image asynchronously
-    		    var image = new Image();
-            image.src = source;
-            image.addEventListener( "load", function() {
-                youtube[ i ].appendChild( image );
-            }( i ) );
-
-    				youtube[i].addEventListener( "click", function() {
-    		        var iframe = document.createElement( "iframe" );
-
-    		            iframe.setAttribute( "frameborder", "0" );
-    		            iframe.setAttribute( "allowfullscreen", "" );
-    		            iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
-
-    		            this.innerHTML = "";
-    		            this.appendChild( iframe );
-    		    } );
-
-    			}
-          let app = firebase.app();
-        } catch (e) {
-          console.error(e);
-        }
-      });
-    </script>
     <!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/skel.min.js"></script>
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/jquery.scrolly.min.js"></script>
+		<script src="../assets/js/skel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-		<script src="assets/js/util.js"></script>
+		<script src="../assets/js/util.js"></script>
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-		<script src="assets/js/main.js"></script>
+		<script src="../assets/js/main.js"></script>
   </body>
 </html>
