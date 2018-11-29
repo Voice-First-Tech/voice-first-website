@@ -1,6 +1,7 @@
 language: node_js
 node_js:
-  -“11.2.0”
+  - "iojs"
+  - "7"
 script:
   - echo “Deploy!!”
 install:
