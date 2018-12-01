@@ -295,8 +295,12 @@
 
       function postCheckoutFirebase() {
         let businessName = $("#companyName").val();
+        let now = new Date();
+        let year = now.getFullYear();
+        let month = (now.getMonth() + 1).toString();
+        let day = now.getDate();
         // Add a new document in collection "cities"
-        db.collection("tidy").doc("customers").collection(businessName).doc("new-order").set({
+        db.collection("tidy").doc("customers").collection(businessName).doc(year + "-" + month + "-" + day).set({
             firstName: $("#firstName").val(),
             company: businessName,
             email: $("#email").val(),
